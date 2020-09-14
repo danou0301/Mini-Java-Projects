@@ -1,0 +1,44 @@
+danou0301
+
+dan boujenah
+
+=============================
+=      File description     =
+=============================
+SpaceShipFactory.java - This class has a single static method (createSpaceships(String[])),
+which is currently empty. It is used by the supplied driver to create all the spaceship objects
+according to the command line arguments
+
+SpaceShip.java - The spaceship object that is used in the SpaceWars game. It's a abstract class.
+All Ships have these functions and variables, and there are two abstracts methods:
+doAction who represent the specific action for each Ship and getImage who return the image of the ship
+
+This class is an abstract class, so i have created few subclass:
+- HumanShip.java : This class represents a ship controlled by a human
+- RunnerShip.java : a ship that tries to avoid all other ships.
+- BasherShip.java : a ship that deliberately tries to collide with other ships.
+- Aggressive.java : a ship that tries to pursue other ships and fire at them
+- Drunkard.java : a ship that fire randomly proximally once per 100 round, and revolves around him.
+- Special.java : a ship who have the same features that the aggressive ship but with a different image
+
+
+=============================
+=          Design           =
+=============================
+I have changed the SpaceShip class to an abstract class, then for all different types of spaceships i
+build a subclass of Spaceship, we define two function:
+- doAction who represent the specific action for each Ship
+- getImage who return the image of the ship
+Thanks to these abstracts class we are able to add or modify each ships easily by modify its class. (Extensibility)
+We can also add or delete some ships by adding or deleted class (Modularity)
+
+=============================
+=  Implementation details   =
+=============================
+- Drunkard Ship: He fire randomly proximally once per 100 round, and revolves around him.
+- Special Ship: i modify the image of the ship
+
+=============================
+=    Answers to questions   =
+=============================
+No questions
