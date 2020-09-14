@@ -1,4 +1,3 @@
-package oop.ex4.data_structures;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
