@@ -1,0 +1,65 @@
+maayanna
+danou0301
+
+
+=============================
+=      File description     =
+=============================
+
+- AvlTree.java : This class is the complete and tested implementation of an AVL-tree, with duplicates keys
+are not allowed.
+- BinaryTree.java : This interface represents a binary search tree.
+
+
+=============================
+=  Implementation details   =
+=============================
+We have created an Implementation BinaryTree that contain all methods of a binary tree.
+And two nested class in AvlTree class:
+- Node what correspond to a treeNode it's represents a node in the tree, that has left, right child, parent,
+height and value.
+- Iterator that iterates over the tree nodes in an ascending order, and does NOT implement the remove() method.
+
+- Implementation for add:
+We used the algorithm that we have learned in DAST.
+We implemented many helper functions, such as balanced, rightRotate and leftRotate and other to update node
+variables.
+When we want to add a new value in the tree, first, we check that the tree not contain this value.
+Then, we are searching for the correct place for this value, and after that check if the tree is balanced,
+if not find the balance factor to apply the right rotation. Finally update wrong height on the tree and wrong
+parents.
+
+- Implementation for delete:
+When we want to delete a value in the tree, first, we check that the value is in the tree. Then we find the
+successor of that value and replace the value to delete to the successor value. After we update wrong heights
+and parents. And finally check if the tree from the successor is balancing. if not do like the add re-balancing
+
+
+=============================
+=    Answers to questions   =
+=============================
+
+5.1:
+1. 1,2,3,4,5,6,7,8,9,10,11,12
+
+5.2:
+1. The running time complexity in this case is log(n!).
+When we add the element number k, it takes log(k-1) and when we calculate the sum we get
+log(1) + log(2)+ ... + log(n-1) = log((n-1)!) and finally we find that asymptotically running time complexity
+is log(n!).
+
+2. Bonus: When the array is sorted, we can find the middle element in O(1), and do recursively on each
+part of the array, and we can get a complexity of O(n).
+
+5.3:
+1. First we search the minimal value in the tree who is O(log n). Then, we are searching the successor of
+the node and it is also O(log n), so we have O(2log n), and asymptotically it is O(log n).
+We are doing this interaction for each node in the tree, so it will take O(n log n).
+
+2. if we build the constructor recursively like in the bonus question, we get theta(n).
+
+5.4:
+1. Our implementation of findMinNode(int h) take O(1), we find a formula that calculate according to h the
+minimal number of node in a AvlTree
+2. It's the best asymptotic running time complexity
+
